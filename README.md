@@ -29,16 +29,20 @@ The separate browser key is `gympt.private.v1`. Source includes only generic pro
 
 ## Programming limits
 
-This is an editable generic template, not a validated personal programme or medical assessment. Load increments are a user-confirmed global total external kg increment, not a full inventory optimizer. Bodyweight is recorded as 0 external kg. Available dumbbells, TRX and rower are demo selections; no personal equipment capabilities are asserted. Barbell and multi-gym inventory can be recorded but their movements are not prescribed until attachments and choices are defined. Restriction notes do not automatically alter a programme: use explicit exercise exclusions and review balance. Goals are descriptive; no physique outcome is guaranteed.
+This is an editable generic template, not a validated personal programme or medical assessment. Load increments are a user-confirmed global total external kg increment, not a full inventory optimizer. Automatic load changes are disabled by default until the user explicitly confirms that increment is available; the editable 2kg demo value alone never authorizes a heavier target. Bodyweight is recorded as 0 external kg. Available dumbbells, TRX and rower are demo selections; no personal equipment capabilities are asserted. Barbell hinge and row movements are available when the category is enabled. Multi-gym movements require individually confirmed lat-pulldown, low-row, chest-press or leg-extension stations. Restriction notes do not automatically alter a programme: use explicit exercise exclusions and review balance. Goals are descriptive; no physique outcome is guaranteed.
 
-The initial library contains nine original exercise-specific schematics and concise cues, not professional coaching videos. The template is intentionally small; adding a broader validated exercise library and per-equipment increments is follow-up work. No off-tab audible notification, service worker, offline installation guarantee, wearable integration, or secure cloud sync is claimed. Timers recover elapsed time after returning even when a browser suspends execution.
+The library contains 32 original exercise-specific two-position schematics with cues and equipment-filtered search. The default six-week block uses at least 17 distinct movements, retains anchor lifts and rotates accessories and conditioning in a deterministic three-week sequence. Manual accessory choices can be reset to automatic. Per-equipment increments remain future work; one confirmed total-load increment is currently used. No off-tab audible notification, service worker, offline installation guarantee, wearable integration, or secure cloud sync is claimed. Timers recover elapsed time after returning even when a browser suspends execution.
 
 ## Project files
 
-`core.mjs`: deterministic planning, progression, timer math, import validation.
+`core.mjs`: progression, timer math and import validation.
+`planning.mjs`: equipment constraints, weekly planning, accessory choices and interval circuits.
+`exercises.mjs` / `extra-exercises.mjs`: 32 original exercise guides.
+`ui.mjs`: weekly prescription and searchable movement library.
 `app.mjs`: UI, durable local storage and event handling.
 `style.css`: responsive visual system.
-`core.test.mjs`: Node built-in tests.
+`core.test.mjs` / `planning.test.mjs`: 22 Node built-in tests.
+`build.mjs`: allowlisted static deployment package; see DEPLOYMENT.md.
 `make-icons.mjs`: dependency-free original PNG icon generator.
 
 All visuals and source were created for this project. No personal inputs, health records, photos or nutrition records belong in this repository.

@@ -3,3 +3,4 @@ private/
 exports/
 *.gympt.json
 qa-output/
+dist/
